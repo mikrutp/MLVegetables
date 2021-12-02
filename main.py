@@ -90,7 +90,7 @@ if __name__ == '__main__':
 
     model.summary()
 
-    epochs = 10
+    epochs = 1
     history = model.fit(
         train_ds,
         validation_data=val_ds,
@@ -159,7 +159,7 @@ if __name__ == '__main__':
 
     model.summary()
 
-    epochs = 15
+    epochs = 2
     history = model.fit(
         train_ds,
         validation_data=val_ds,
@@ -189,11 +189,12 @@ if __name__ == '__main__':
     plt.title('Training and Validation Loss')
     plt.show()
 
-    sunflower_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/592px-Red_sunflower.jpg"
-    sunflower_path = tf.keras.utils.get_file('Red_sunflower', origin=sunflower_url)
+    # sunflower_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/592px-Red_sunflower.jpg"
+    # sunflower_path = tf.keras.utils.get_file('Red_sunflower', origin=sunflower_url)
+    corn_path = ("D://AAinfa/sem2/AnObCyfr/trainset/Corn/2_100.jpg")
 
     img = tf.keras.utils.load_img(
-        sunflower_path, target_size=(img_height, img_width)
+        corn_path, target_size=(img_height, img_width)
     )
     img_array = tf.keras.utils.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0)  # Create a batch
