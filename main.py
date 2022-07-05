@@ -94,6 +94,8 @@ if __name__ == '__main__':
         layers.Flatten(),
         layers.Dense(128, activation='relu'),
         layers.Dense(num_classes)
+
+        "test"
     ])
 
 
